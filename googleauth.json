@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hypecodingofferings",
+  "private_key_id": "4f0ab76efe54a7dd5f29d3b790dc70c29ab3ff7d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJGIwL52W604bw\nTS0rcKri28c+wc5lzObPoZGBkKKwKRC9StGLiP8F5HegJzaN1AIHBIRtUyBQd8fJ\nSQkme/VPRiNCNjlMKjC7Kda/G3coS/JDruuHPAqE1P+G4Co7wOTsQcfIyAYXt1nn\niENq9svV2TYdABtvejGWlLSK9M/hnn2/MR7EnzRHZo4j7tTBF0LQMHXlzWzXUc1J\njozgoVo6H0G+4QWWm0k77RunFFYC8o+YL7Q7GVA1kaUBJb0jpQjiwbTclgBFo+UO\nt3mOzMs3Q6RCViILya5mCX/twsAex82gAIk9pgRRFQXo9FGCLZAU5Hz/Rg0QwjxA\n4PONbtOBAgMBAAECgf9adpSJrxXcofMpWgeWIWOLSI+xq6L/UpjyJwvG/DvNH2ZM\ncii6igcFda8LtTZ4Vc/+ue2TCM1uA8zFCnMcpQPtl5ZqKXgfcttYnOTBli5hgp7b\nLDuned1mw2+IZyC0jYY2Nlyk3sr2IXKkDeUJrbHM3twEqMsscjuIvmqoGA5Lun3p\nTbWSh93BOWzh6+crQMSdUDD58isJrXZDgIFc27Gzdd5E46sa5YTt1iClSruTtuTO\n5HPyvSKQQG8M/KJDJRufo81yJgKRspeu1+6MAcZ7h7SAmr9PsnZWga2ULaRZyW1I\nsXWzix12idL7NrN6PbY9Vgi/ejzDh+P2jQerfWECgYEA++SwdW7vCTL+/hmaQg1N\nZkscIvkxOwUPMfQ7xNsLZs0vnfHSSJhv3pZ/wIcBt0+ZdHtKgk4Y983Mxh+NeyE3\nhcgj1tQW3p8YZV6OfqVE9uYgty5m4Z+ePMntNfS2M9q2tytMryjfY8tHrz1j2EJs\nrFpFCK91R5hG9p9/4YcB0iUCgYEAzF/ZDC/j7+voX/MMGPfJWtV9ZQitdGyCpc+A\nrtHP50Ua9EQO4JJ0uBF6m7DDFle9WAgH0VH7G7bk7V2B1zMtWylIaJfsaldpeOaa\nMfDcZHyiEH3drmG5Z+moqVQQTQJ8r8LYHA2yI73c05MwlWDnEQ8b0ISNwKZs4lws\nqk9QZy0CgYEAyDGrJMnz5IXJLz494T0dRK1xQUJ3pAaTWwpW7k+AskVlEMx+af/s\n+ST3h5ZFAOGcfnz2bLWRFnFTzCqLkU6HCCZWhYiuXGRpSTdrXLARLYEcgzm3vp3T\nb1C03GsO3At5p/4bxiJf2LpY0Kej0N6J7DkaIJsCRNJ7o8qEIkPgaJkCgYEAj3Iq\n1rn6Y5iSJl5iPFgW1RGJjNOVY2USIi1NpeaP5USE0bO/OXKyR8vE4egkVddJh7ND\nQXEoLeCmN9Bs5M3/5L9KGlef0Vf/KKO60Ji9KC6uVaLyaIYg60V+YzMkqdi4CWlZ\n4/7c7OdDSqFB9WbpZ/jRzf5rvC9Tt2F43CUFSxUCgYBw4MumUiQ3R5z4BM7VawqN\njzvE6/qp+b8ySRp8un1geA26Sn4hVb2ehuuruXHMKuc4zOGKgPBzLD6dGWqkBtbl\n1eCRPJ8zYH5lnuhYJXySGycGTuXCSgCYb+iHn4YGOpfMEexnIJTiR8fs8ENslRt6\nHkVm/2SaplkdrlP/pobbYg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bus-notify@hypecodingofferings.iam.gserviceaccount.com",
+  "client_id": "110388404245271547854",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bus-notify%40hypecodingofferings.iam.gserviceaccount.com"
+}
