@@ -22,7 +22,7 @@ def find_labels():
     # The name of the image file to annotate
     file_name = os.path.join(
         os.path.dirname(__file__),
-        'bus.jpg')
+        'frame.jpg')
 
     # Loads the image into memory
     with io.open(file_name, 'rb') as image_file:
@@ -74,15 +74,18 @@ def match_labels(labels):
     for label in labels:
         for match in matchers:
             if str.lower(match) in str.lower(label.description):
-                if message_sent['sent']:
-                    if time.time() - message_sent['time'] < 5 * 60:
-                        sms.send('The Bus is in front of your house!')
+                elapsed = time.time() - message_sent['time']
+                if elapsed < 5 * 60 and elapsed > 0.25 * 60:
+                    if message_sent['sent']:
                         message_sent['sent'] = False
-                        return
-                sms.send('The Bus has entered!')
-                message_sent['sent'] = True
-                message_sent['time'] = time.time()
-                print('Sent Message that the Bus has entered!')
+                        sms.send('The Bus is in front of your house!')
+                        print('Sent Message that the Bus is in front!')
+                    return
+                if elapsed > 5 * 60 and not message_sent['sent']:
+                    message_sent['sent'] = True
+                    sms.send('The Bus has entered!')
+                    message_sent['time'] = time.time()
+                    print('Sent Message that the Bus has entered!')
 
 
 
@@ -93,9 +96,9 @@ cap = cv2.VideoCapture(0)
 length = 0
 seconds = 1
 
-message_sent = {'sent': False, 'time': None}
+message_sent = {'sent': False, 'time': time.time() - 5 * 60}
 
-matchers = {'bus', 'school'}
+matchers = {'bus', 'school', 'public', 'transportation'}
 
 phone = '2677508123'
 email = 'shivam4141997@gmail.com'
@@ -107,24 +110,22 @@ if __name__ == "__main__":
     while(1):
         # Take each frame
 
-        # _, frame = cap.read()
-        # k = cv2.waitKey(5) & 0xFF
-        # cv2.imwrite( os.path.join(
-        #     os.path.dirname(__file__),
-        #     'frame.jpg'), frame )
+        _, frame = cap.read()
+        k = cv2.waitKey(5) & 0xFF
+        cv2.imwrite( os.path.join(
+            os.path.dirname(__file__),
+            'frame.jpg'), frame )
 
         if length % (30 * seconds) == 0:
             thread = threading.Thread(target=find_labels)
             thread.start()
 
-        # image = putText(frame, label_list)
-        # cv2.imshow('Video',image)
+        image = putText(frame, label_list)
+        cv2.imshow('Video',image)
 
         length = length + 1
 
-        # if k == 27:
-        #     break
-
-        time.sleep(1)
+        if k == 27:
+            break
 
 cv2.destroyAllWindows()
