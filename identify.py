@@ -79,13 +79,13 @@ def match_labels(labels):
                     if message_sent['sent']:
                         message_sent['sent'] = False
                         sms.send('The Bus is in front of your house!')
-                        print('Sent Message that the Bus is in front!')
+                        print('Sent Message that the Bus is in front! Matched "{}"'.format(match))
                     return
                 if elapsed > 5 * 60 and not message_sent['sent']:
                     message_sent['sent'] = True
                     sms.send('The Bus has entered!')
                     message_sent['time'] = time.time()
-                    print('Sent Message that the Bus has entered!')
+                    print('Sent Message that the Bus has entered! Matched "{}"'.format(match))
 
 
 
