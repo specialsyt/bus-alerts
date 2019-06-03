@@ -44,7 +44,8 @@ def find_labels():
         global label_list
         label_list = labels
 
-        match_labels(labels)
+        thread = threading.Thread(target=match_labels, args=[labels])
+        thread.start()
     except:
         print('An API error has occured.')
 
@@ -53,7 +54,7 @@ import cv2
 font = cv2.FONT_HERSHEY_SIMPLEX
 bottomLeftCornerOfText = (10, 470)
 fontScale = 1
-fontColor = (255, 255, 255)
+fontColor = (0, 0, 0)
 lineType = 2
 
 def putText(image, labels):
@@ -69,6 +70,7 @@ def putText(image, labels):
                         lineType)
     return image
 
+import winsound
 
 def match_labels(labels):
     for label in labels:
@@ -80,14 +82,14 @@ def match_labels(labels):
                         message_sent['sent'] = False
                         sms.send('The Bus is in front of your house!')
                         print('Sent Message that the Bus is in front! Matched "{}"'.format(match))
+                        winsound.Beep(440, 200)
                     return
                 if elapsed > 5 * 60 and not message_sent['sent']:
                     message_sent['sent'] = True
                     sms.send('The Bus has entered!')
                     message_sent['time'] = time.time()
                     print('Sent Message that the Bus has entered! Matched "{}"'.format(match))
-
-
+                    winsound.Beep(440, 200)
 
 import numpy as np
 import time
@@ -107,6 +109,7 @@ password = '41419977'
 if __name__ == "__main__":
     sms = SMS(phone, email, password)
     sms.send('Program Starting!')
+    winsound.Beep(440, 200)
     while(1):
         # Take each frame
 
